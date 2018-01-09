@@ -1,12 +1,10 @@
-# Includes complete Jenkins configuration in order to run croc-hunter pipeline
+# Includes complete Jenkins configuration in order to run pipeline
 # To install on your own cluster, run:
 # helm --namespace jenkins --name jenkins -f ./jenkins-values.yaml install stable/jenkins
 
 Master:
   ImageTag: "2.74"
   Memory: "512Mi"
-  #HostName: jenkins.acs.az.estrado.io
-  #ServiceType: ClusterIP
   ServiceType: LoadBalancer
   ServicePort: 8080
   InstallPlugins:
