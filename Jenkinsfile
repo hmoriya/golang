@@ -7,5 +7,10 @@ pipeline {
                 sh 'svn --version'
             }
         }
+	stage('node'){
+	    steps {
+		sh 'go --version'
+		}
+	}
     }
 }
