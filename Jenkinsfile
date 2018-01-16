@@ -13,7 +13,7 @@ pipeline {
         sh 'pwd'
         sh 'echo $USER'
         sh 'docker build -t jenkins-master .'
-        docker.build('jenkins-master')
+       
       }
     }
   }
