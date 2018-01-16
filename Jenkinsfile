@@ -1,5 +1,5 @@
 pipeline {
-  def app
+  
   agent any
   stages {
     stage('Test') {
@@ -13,7 +13,7 @@ pipeline {
         sh 'pwd'
         sh 'echo $USER'
         sh 'docker build -t jenkins-master .'
-        app = docker.build('jenkins-master')
+        docker.build('jenkins-master')
       }
     }
   }
