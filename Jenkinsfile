@@ -14,7 +14,7 @@ pipeline {
     }
     stage('ls') {
       steps {
-        sh 'ls'
+        echo '$USER'
       }
     }
   }
