@@ -9,7 +9,7 @@ pipeline {
     stage('ls') {
       steps {
         echo '$USER'
-        sh 'echo $USER'
+        sh 'docker build jenkins-master .'
       }
     }
   }
