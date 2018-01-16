@@ -6,9 +6,10 @@ pipeline {
         echo 'Hello World'
       }
     }
-    stage('ls') {
+    stage('docker build') {
       steps {
-        echo '$USER'
+        sh 'ls -la'
+        echo $USER
         sh 'docker build -t jenkins-master .'
       }
     }
