@@ -1,5 +1,4 @@
 pipeline {
-  
   agent any
   stages {
     stage('Test') {
@@ -11,9 +10,8 @@ pipeline {
       steps {
         sh 'ls -la'
         sh 'pwd'
-        sh 'echo $USER'
+        sh 'who'
         sh 'docker build -t jenkins-master .'
-       
       }
     }
   }
